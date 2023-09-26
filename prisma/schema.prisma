@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Answer {
+  id  String  @id @default(uuid())
+  full_name  String
+  phone_number String 
+  start_date  String
+  preferred_language  String
+  how_found String
+  newsletter_subscription Boolean
+}
