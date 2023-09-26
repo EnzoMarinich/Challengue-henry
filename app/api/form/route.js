@@ -1,6 +1,5 @@
 import data from "@/app/form.json"
 import { NextResponse } from "next/server"
-const { PrismaClient } = require("@prisma/client");
 
 
 export async function GET(req) {
