@@ -24,13 +24,13 @@ export default async function Page() {
   //   }
   //   fetchData();
   // }, []);
-  // if(!data || !rstas ){
-  //   return (
-  //     <div className='relative h-full flex flex-col items-center gap-9 p-20'>
-  //       <h1 className='text-3xl text-orange-500 font-semibold'>Cargando...</h1>
-  //     </div>
-  //   )
-  // }
+  if(!data || !rstas ){
+    return (
+      <div className='relative h-full flex flex-col items-center gap-9 p-20'>
+        <h1 className='text-3xl text-orange-500 font-semibold'>Cargando...</h1>
+      </div>
+    )
+  }
 
 
   return (
