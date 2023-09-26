@@ -1,8 +1,9 @@
+import { PrismaClient } from "@prisma/client"
 import { NextResponse } from "next/server"
-const { PrismaClient } = require("@prisma/client");
+
 
 export async function GET(){
-    try {
+    try{
         const prisma = new PrismaClient()
 
         const data = await prisma.answer.findMany()
@@ -26,7 +27,7 @@ export async function POST(req) {
             data : form
         })
 
-        return NextResponse.json({"data": form})
+        return NextResponse.json({"data": rsta})
     } catch (error) {
 
         return new NextResponse(error, {status:500})
