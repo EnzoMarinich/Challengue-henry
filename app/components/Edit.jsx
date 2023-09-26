@@ -8,7 +8,7 @@ export default function Edit({id}) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const rsta = await axios(`/api/answer/${id}`);
+            const rsta = await axios(`https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/answer/${id}`);
             setData(rsta.data);
         };
 

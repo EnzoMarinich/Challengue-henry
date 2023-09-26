@@ -32,10 +32,10 @@ const Form = (props) => {
 
         try {
             if(props.rsta) {
-                const edit = await axios.put(`/api/answer/${props.rsta.id}`, {form})
+                const edit = await axios.put(`https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/answer/${props.rsta.id}`, {form})
                 alert("editado exitosamente")
             } else {
-                const rsta = await axios.post("/api/answer", {form})
+                const rsta = await axios.post("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/answer", {form})
                 alert("Respuesta guardada exitosamente")
                 router.push("/answers")
             }
