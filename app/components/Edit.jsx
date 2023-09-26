@@ -8,7 +8,7 @@ export default function Edit({id}) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const rsta = await axios(`http://localhost:3000/api/answer/${id}`);
+            const rsta = await axios(`/api/answer/${id}`);
             setData(rsta.data);
         };
 

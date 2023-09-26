@@ -8,10 +8,10 @@ import { Button } from '@/app/components/Button'
 export default async function Page() {
     
 
-  const rstas = await axios("http://localhost:3000/api/answer")
+  const rstas = await axios("/api/answer")
 
   
-  const data = (await (axios("http://localhost:3000/api/form"))).data.items
+  const data = (await (axios("/api/form"))).data.items
 
   return (
     <div className='relative h-full flex flex-col items-center gap-9 p-20'>

@@ -15,8 +15,8 @@ export default function Page() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const rsta = await axios.post(`http://localhost:3000/api/answer/${answerId}`, {answerId});
-            const newdata = (await (axios("http://localhost:3000/api/form"))).data.items
+            const rsta = await axios.post(`/api/answer/${answerId}`, {answerId});
+            const newdata = (await (axios("/api/form"))).data.items
 
             setData(newdata);
             setRsta(rsta.data)

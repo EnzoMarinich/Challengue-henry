@@ -7,7 +7,7 @@ import { Button } from '@/app/components/Button'
 export default async function Home() {
 
 
-  const data = (await (axios("http://localhost:3000/api/form"))).data.items
+  const data = (await (axios("/api/form"))).data.items
 
   return (
     <div className='p-10 relative  h-screen flex flex-col items-center justify-center'>
