@@ -1,13 +1,26 @@
 
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Form from '@/app/components/Form'
 import axios from 'axios'
 import { Button } from '@/app/components/Button'
 
-export default async function Home() {
+export default  function Home() {
 
+  const [data, setData] = useState(null)
+  
+  
+  useEffect(()=>{
+    const fetchData = async () => {
+      
+    let res = (await (axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/form"))).data.items
 
-  const data = (await (axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/form"))).data.items
+    setData(res)
+  }
+
+  fetchData()
+  }, [])
+
 
   return (
     <div className='p-10 relative  h-screen flex flex-col items-center justify-center'>
