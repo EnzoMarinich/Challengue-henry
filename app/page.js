@@ -5,7 +5,7 @@ import { Button } from './components/Button'
 
 export default async function Home() {
 
-  axios.defaults.baseURL = 'https://challengue-henry.vercel.app/api'
+  axios.defaults.baseURL = 'https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/'
 
 
   return (
