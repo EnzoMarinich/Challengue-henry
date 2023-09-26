@@ -35,8 +35,9 @@ const Form = (props) => {
                 const edit = await axios.put(`/api/answer/${props.rsta.id}`, {form})
                 alert("editado exitosamente")
             } else {
-                const rsta = await axios.post("/api/form", {form})
+                const rsta = await axios.post("/api/answer", {form})
                 alert("Respuesta guardada exitosamente")
+                router.push("/answers")
             }
         } catch (error) {
             console.log(error)
