@@ -7,10 +7,10 @@ import { Button } from '@/app/components/Button'
 export default async function Page() {
     
 
-  const rstas = await axios("https://challengue-henry.vercel.app/api/answer")
+  const rstas = await axios("http://localhost:3000/api/answer")
 
   
-  const data = (await (axios("https://challengue-henry.vercel.app/api/form"))).data.items
+  const data = (await (axios("http://localhost:3000/api/form"))).data.items
 
 
   if(!data || !rstas ){
