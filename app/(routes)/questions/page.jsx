@@ -13,7 +13,7 @@ export default  function Home() {
   useEffect(()=>{
     const fetchData = async () => {
       
-    let res = (await (axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/form"))).data.items
+    let res = (await (axios("https://challengue-henry.vercel.app/api/form"))).data.items
 
     setData(res)
   }

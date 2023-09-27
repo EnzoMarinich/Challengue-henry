@@ -7,23 +7,12 @@ import { Button } from '@/app/components/Button'
 export default async function Page() {
     
 
-  const rstas = await axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/answer")
+  const rstas = await axios("https://challengue-henry.vercel.app/api/answer")
 
   
-  const data = (await (axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/form"))).data.items
+  const data = (await (axios("https://challengue-henry.vercel.app/api/form"))).data.items
 
-  // const [data, setData] = useState(null);
-  // const [rstas, setRstas] = useState(null);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const dataResponse = await axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/app/api/form");
-  //     const rstasResponse = await axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/app/api/answer");
-  //     setData(dataResponse.data.items);
-  //     setRstas(rstasResponse.data.data);
-  //   }
-  //   fetchData();
-  // }, []);
   if(!data || !rstas ){
     return (
       <div className='relative h-full flex flex-col items-center gap-9 p-20'>

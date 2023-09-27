@@ -15,8 +15,8 @@ export default function Page() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const rsta = await axios.post(`https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/answer/${answerId}`, {answerId});
-            const newdata = (await (axios("https://challengue-henry-dv5kt6186-enzomarinich.vercel.app/api/form"))).data.items
+            const rsta = await axios.post(`https://challengue-henry.vercel.app/api/answer${answerId}`, {answerId});
+            const newdata = (await (axios("https://challengue-henry.vercel.app/api/form"))).data.items
 
             setData(newdata);
             setRsta(rsta.data)
